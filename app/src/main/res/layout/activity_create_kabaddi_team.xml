@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TeamsAndContest.CreateTeam.Kabaddi.CreateKabaddiTeam">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#083c5d"
+            app:title="CREATE TEAM"
+            app:titleTextColor="@color/amber"
+            app:subtitle="15mins left"
+            app:subtitleTextColor="@color/white"
+            app:subtitleTextAppearance="@color/white"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rr1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/navyblue"
+        android:layout_below="@id/appLayout">
+
+        <TextView
+            android:id="@+id/TV1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Maximum of 5 players from one team"
+            android:textColor="@color/white"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/TV2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Players"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:layout_below="@id/TV1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="42dp"/>
+
+        <TextView
+            android:id="@+id/player_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/7"
+            android:textColor="@color/white"
+            android:layout_below="@id/TV2"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            <ImageView
+                android:id="@+id/IMG1"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_below="@id/TV1"
+                android:src="@color/white"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginStart="10dp">
+                <TextView
+                    android:id="@+id/team1name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IND"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginEnd="10dp">
+                <TextView
+                    android:id="@+id/team2name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PAK"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/IMG2"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_below="@id/TV1"
+                android:src="@color/white"/>
+        </LinearLayout>
+
+        <com.mackhartley.roundedprogressbar.RoundedProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="8dp"
+            app:rpbAnimationLength="250"
+            app:rpbBackgroundColor="@color/blackshade"
+            app:rpbBackgroundTextColor="@color/white"
+            app:rpbCornerRadiusBottomRight="20dp"
+            app:rpbCornerRadiusTopLeft="20dp"
+            app:rpbProgressColor="@color/amber"
+            app:rpbShowProgressText="false">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="1              2              3              4              5               6               7 "
+                android:gravity="center"
+                android:textColor="@color/blackshade"
+                android:textStyle="bold"
+                android:fontFamily="@font/lato_heavy"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"/>
+        </com.mackhartley.roundedprogressbar.RoundedProgressBar>
+
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/rr1"
+        app:tabIndicatorColor="@color/amber"
+        app:tabTextColor="@color/blackshade">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DEF"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AR"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RAIDER"/>
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tablayout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <androidx.cardview.widget.CardView
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            app:cardCornerRadius="50dp"
+            android:layout_margin="20dp"
+            app:cardBackgroundColor="@color/blackshade"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3">
+                <com.github.nikartm.button.FitButton
+                    android:id="@+id/preview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:fb_text="PREVIEW"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1.4"
+                    app:fb_icon="@drawable/preview"
+                    app:fb_iconPosition="left"
+                    app:fb_iconMarginEnd="10dp"
+                    app:fb_iconWidth="17dp"
+                    app:fb_iconHeight="17dp"
+                    app:fb_textStyle="bold"
+                    app:fb_iconColor="@color/white"
+                    app:fb_textColor="@color/white"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="/"
+                    android:gravity="center"
+                    android:textSize="25dp"
+                    android:textColor="#A8A8A8"
+                    android:layout_weight="0.1"/>
+                <com.github.nikartm.button.FitButton
+                    android:id="@+id/lineup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:fb_text="LINEUP"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1.4"
+                    app:fb_textColor="@color/white"
+                    app:fb_textStyle="bold"
+                    app:fb_iconColor="@color/white"
+                    app:fb_iconWidth="17dp"
+                    app:fb_iconHeight="17dp"
+                    app:fb_icon="@drawable/lineup"
+                    app:fb_iconPosition="left"
+                    app:fb_iconMarginEnd="5dp"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <com.github.nikartm.button.FitButton
+            android:id="@+id/next"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:layout_marginVertical="20dp"
+            app:fb_backgroundColor="#45A510"
+            app:fb_text="NEXT"
+            android:gravity="center"
+            app:fb_textColor="@color/white"
+            app:fb_textStyle="bold"
+            app:fb_cornerRadius="35dp"
+            app:fb_shadow="5dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="190dp"
+    android:layout_height="55dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:elevation="1dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@color/blackshade"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:id="@+id/jersy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        android:elevation="25dp"
+        android:shadowColor="@color/blackshade"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="10"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:paddingHorizontal="2dp"
+        android:gravity="end|bottom"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Virat Kohli"
+        android:textStyle="bold"
+        android:textColor="@color/blackshade"
+        android:layout_toStartOf="@+id/img"
+        android:layout_alignTop="@id/img"
+        android:layout_marginTop="5dp"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+
+    <TextView
+        android:id="@+id/role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BATSMAN"
+        android:textSize="8dp"
+        android:textColor="@color/blackshade"
+        android:layout_toStartOf="@+id/img"
+        android:layout_below="@id/name"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+
+</RelativeLayout>

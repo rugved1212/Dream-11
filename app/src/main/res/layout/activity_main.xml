@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#083c5d">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo"
+                android:layout_marginHorizontal="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DREAM 11"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="#ffbb39"
+                android:fontFamily="@font/lato_heavy"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="80dp">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardviewmoney"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    app:cardBackgroundColor="@color/blackshade"
+                    app:cardCornerRadius="50dp"
+                    android:layout_centerInParent="true">
+                    <TextView
+                        android:id="@+id/wallet_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="₹"
+                        android:textColor="@color/white"
+                        android:textSize="19dp"
+                        android:textStyle="bold"
+                        android:gravity="start|center_vertical"
+                        android:layout_marginHorizontal="10dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"/>
+                </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:id="@+id/add_money_btn"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/plus"
+                    android:elevation="10dp"
+                    android:layout_alignEnd="@id/cardviewmoney"
+                    android:translationX="7dp"
+                    android:translationY="20dp"/>
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardCornerRadius="35dp"
+        app:cardElevation="25dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_margin="15dp"
+        android:layout_below="@id/appLayout"
+        android:elevation="25dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/cricketTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Cricket"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/footballTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Football"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/kabaddiTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Kabaddi"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:elevation="-10dp">
+
+            <TextView
+                android:id="@+id/cricketBG"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=""
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/selected_background"/>
+
+            <TextView
+                android:id="@+id/footballBG"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=""
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/kabaddiBG"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=""
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNAV"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bottom_navigator"
+        app:itemIconSize="25dp"
+        app:itemIconTint="#ffbb39"
+        app:itemRippleColor="#ffbb39"
+        app:itemTextColor="#ffffff"
+        app:menu="@menu/bottomnavigation"
+        style="@style/Widget.Design.BottomNavigationView"/>
+
+
+</RelativeLayout>

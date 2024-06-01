@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.Profile"
+    android:background="@drawable/profile_bg">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#FFFFFF"
+        android:translationY="175dp">
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/dp"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginTop="115dp"
+            android:layout_marginStart="20dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FFFFFF"
+            app:civ_circle_background_color="#FFFFFF"
+            android:src="@drawable/default_profile"
+            android:elevation="25dp"/>
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginTop="145dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/dp"/>
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="example@gmail.com"
+            android:textColor="#A8A8A8"
+            android:fontFamily="monospace"
+            android:layout_below="@id/username"
+            android:layout_alignStart="@id/username"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="160dp"
+            android:layout_height="85dp"
+            app:cardBackgroundColor="#DDDDDD"
+            app:cardCornerRadius="10dp"
+            android:layout_below="@id/dp"
+            android:layout_margin="20dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/total_winning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="$0"
+                    android:textColor="@color/blackshade"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Winning"
+                    android:textColor="@color/blackshade"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="5dp"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="160dp"
+            android:layout_height="85dp"
+            app:cardBackgroundColor="#D5FFB1"
+            app:cardCornerRadius="10dp"
+            android:layout_below="@id/dp"
+            android:layout_margin="20dp"
+            android:layout_alignParentEnd="true">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/wallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="$0"
+                    android:textColor="@color/blackshade"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Wallet"
+                    android:textColor="@color/blackshade"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:id="@+id/button_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_below="@id/cardview">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.github.nikartm.button.FitButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:fb_backgroundColor="#ffbb39"
+                    app:fb_cornerRadius="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="10dp"
+                    app:fb_shadow="0dp"
+                    android:gravity="center"
+                    app:fb_icon="@drawable/withdraw"
+                    app:fb_iconPosition="top"
+                    app:fb_iconColor="#1d2731"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Withdraw"
+                    android:textSize="10dp"
+                    android:textColor="#1d2731"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lato_heavy"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.github.nikartm.button.FitButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:fb_backgroundColor="#ffbb39"
+                    app:fb_cornerRadius="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="10dp"
+                    app:fb_shadow="0dp"
+                    android:gravity="center"
+                    app:fb_icon="@drawable/transaction"
+                    app:fb_iconPosition="top"
+                    app:fb_iconColor="#1d2731"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transaction"
+                    android:textSize="10dp"
+                    android:textColor="#1d2731"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lato_heavy"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.github.nikartm.button.FitButton
+                    android:id="@+id/add_money"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:fb_backgroundColor="#ffbb39"
+                    app:fb_cornerRadius="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="10dp"
+                    app:fb_shadow="0dp"
+                    android:gravity="center"
+                    app:fb_icon="@drawable/wallet"
+                    app:fb_iconPosition="top"
+                    app:fb_iconColor="#1d2731"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Money"
+                    android:textSize="10dp"
+                    android:textColor="#1d2731"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lato_heavy"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.github.nikartm.button.FitButton
+            android:id="@+id/profile_setting"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/button_profile"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_vertical"
+            app:fb_backgroundColor="@color/deselection_color"
+            app:fb_fontFamilyRes="@font/lato_heavy"
+            app:fb_text="Profile Setting"
+            app:fb_textColor="#1d2731"
+            app:fb_textPaddingStart="20dp"
+            app:fb_textStyle="bold"
+            app:fb_icon="@drawable/edit"
+            app:fb_iconMarginStart="190dp"
+            app:fb_iconColor="#1d2731"
+            app:fb_iconPosition="right"
+            app:fb_borderWidth="1dp"
+            app:fb_borderColor="#ebcfe3"/>
+
+        <com.github.nikartm.button.FitButton
+            android:id="@+id/log_out"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/profile_setting"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center_vertical"
+            app:fb_backgroundColor="@color/deselection_color"
+            app:fb_fontFamilyRes="@font/lato_heavy"
+            app:fb_text="Log Out"
+            app:fb_textColor="#1d2731"
+            app:fb_textPaddingStart="20dp"
+            app:fb_textStyle="bold"
+            app:fb_icon="@drawable/logout"
+            app:fb_iconPosition="right"
+            app:fb_iconColor="#1d2731"
+            app:fb_iconMarginStart="235dp"
+            app:fb_borderWidth="1dp"
+            app:fb_borderColor="#ebcfe3"/>
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>

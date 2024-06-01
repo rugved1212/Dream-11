@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TeamsAndContest.TeamAndContest">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#083c5d"
+            app:title="IND VS PAK"
+            app:titleTextColor="@color/amber"
+            app:subtitle="5days20hrsleft"
+            app:subtitleTextColor="@color/white"
+            app:subtitleTextAppearance="@color/white"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/appLayout"
+        app:tabMode="fixed"
+        app:tabBackground="@color/navyblue"
+        app:tabTextColor="@color/blackshade"
+        app:tabIndicatorColor="@color/amber"
+        app:tabRippleColor="@color/amber">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/contest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contest"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/mycontest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Contest (0)"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/myteam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Team (0)"/>
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tablayout"/>
+
+</RelativeLayout>

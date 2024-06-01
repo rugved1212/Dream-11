@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview1"
+        android:layout_width="wrap_content"
+        android:layout_height="335dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/bgimage"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@drawable/bg_cricket"/>
+
+            <TextView
+                android:id="@+id/jersyNo"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="170dp"
+                android:fontFamily="@font/bebasneue"
+                android:textColor="@color/white"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="40dp"
+                android:elevation="50dp"
+                android:shadowRadius="20"
+                android:shadowDx="10"
+                android:shadowDy="0"
+                android:text="18"
+                android:shadowColor="#292929"/>
+
+            <ImageView
+                android:id="@+id/playerImage"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_alignEnd="@+id/bgimage"
+                android:layout_alignBottom="@id/bgimage"
+                android:elevation="100dp"/>
+
+            <TextView
+                android:id="@+id/playerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player Name"
+                android:textSize="40dp"
+                android:layout_below="@id/bgimage"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/bebasneue"
+                android:textColor="#333333"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <ImageView
+                android:id="@+id/flagimg"
+                android:layout_width="40dp"
+                android:layout_height="27.5dp"
+                android:layout_below="@id/playerName"
+                android:layout_marginStart="15dp"/>
+
+            <TextView
+                android:id="@+id/playerrole_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/playerName"
+                android:layout_toEndOf="@id/flagimg"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="2dp"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textColor="#333333"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/bgimage"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AGE :"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:layout_margin="7dp"
+                    android:textColor="#333333"/>
+
+                <TextView
+                    android:id="@+id/card_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="50dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:textColor="#333333"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
+

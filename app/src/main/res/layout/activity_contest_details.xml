@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TeamsAndContest.Contest_Detail.Contest_Details">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#083c5d"
+            app:title="IND VS PAK"
+            app:titleTextColor="@color/amber"
+            app:subtitle="5days20hrsleft"
+            app:subtitleTextColor="@color/white"
+            app:subtitleTextAppearance="@color/white"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/prizepool_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appLayout"
+        android:text="Prize Pool"
+        android:textSize="13dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/prize_pool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prizepool_TV"
+        android:text="2 Lakhs"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="15dp"/>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prize_pool"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:progress="50"
+        app:indicatorColor="@color/amber"
+        app:trackCornerRadius="1000dp"
+        app:trackColor="@color/blackshade"/>
+
+    <TextView
+        android:id="@+id/slot_remain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress"
+        android:layout_alignStart="@id/progress"
+        android:text="500 spots left"
+        android:textSize="12dp"
+        android:textColor="#FF0000"/>
+
+    <TextView
+        android:id="@+id/limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress"
+        android:layout_alignEnd="@id/progress"
+        android:text="1000 spots"
+        android:textSize="12dp"/>
+
+    <com.github.nikartm.button.FitButton
+        android:id="@+id/join_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:fb_text="JOIN 49"
+        android:gravity="center"
+        app:fb_textColor="@color/white"
+        app:fb_textSize="15dp"
+        app:fb_textStyle="bold"
+        app:fb_backgroundColor="#45A510"
+        android:layout_below="@id/progress"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="25dp"
+        app:fb_cornerRadius="2.5dp"/>
+
+    <TextView
+        android:id="@+id/wining_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/join_btn"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="Winnings"
+        android:textColor="#45A510"
+        android:textSize="20dp"
+        android:textStyle="bold|italic" />
+
+    <RelativeLayout
+        android:id="@+id/rr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wining_tv"
+        android:elevation="2dp"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rank"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Winning"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="10dp"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rr"/>
+
+</RelativeLayout>

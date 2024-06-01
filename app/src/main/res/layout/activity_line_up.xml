@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TeamsAndContest.LineUP.LineUP">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#083c5d"
+            app:title="IND VS PAK"
+            app:titleTextColor="@color/amber"
+            app:subtitle="5days20hrsleft"
+            app:subtitleTextColor="@color/white"
+            app:subtitleTextAppearance="@color/white"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rr"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_below="@id/appLayout"
+        android:background="@color/white"
+        android:elevation="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/flag1"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_margin="10dp"/>
+            <TextView
+                android:id="@+id/team1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IND"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:text="PLAYING 11"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:textColor="#31AA0F"
+            android:layout_marginVertical="10dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentEnd="true">
+            <TextView
+                android:id="@+id/team2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PAK"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <ImageView
+                android:id="@+id/flag2"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_margin="10dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/deselection_color"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/appLayout"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rr"
+        android:layout_alignEnd="@id/view"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rr"
+        android:layout_toEndOf="@id/view"
+        android:layout_alignParentEnd="true"/>
+
+    <ImageView
+        android:id="@+id/not_announce_img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/question_mark"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/not_announce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/not_announce_img"
+        android:text="The LineUP is not announce yet !"
+        android:fontFamily="casual"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

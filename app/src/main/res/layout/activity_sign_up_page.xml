@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Authentication.SignUpPage"
+    android:background="@drawable/loginpage_bg">
+
+    <TextView
+        android:id="@+id/helloTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/lato_heavy"
+        android:text="Hello Sir,"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:elevation="25dp"
+        android:shadowColor="@color/black"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="15"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up to play !!!"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        android:fontFamily="@font/lato_heavy"
+        android:layout_below="@id/helloTV"
+        android:layout_alignLeft="@id/helloTV"
+        android:layout_marginHorizontal="5dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textinputlayput1"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="15dp"
+        app:boxStrokeColor="@color/white"
+        app:boxStrokeWidth="2dp"
+        android:hint="Email ID"
+        android:textColorHint="@color/white"
+        android:layout_centerInParent="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableStart="@drawable/email"
+            android:drawablePadding="15dp"
+            android:textColor="@color/white"
+            android:drawableTint="@color/white"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textinputlayput2"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/textinputlayput1"
+        app:boxStrokeColor="@color/white"
+        app:boxStrokeWidth="2dp"
+        app:hintEnabled="true"
+        android:hint="Password"
+        android:textColorHint="@color/white"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/lock"
+            android:drawablePadding="15dp"
+            android:textColor="@color/white"
+            android:drawableTint="@color/white"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textinputlayput3"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/textinputlayput2"
+        app:boxStrokeColor="@color/white"
+        app:boxStrokeWidth="2dp"
+        app:hintEnabled="true"
+        android:hint="Confirm Password"
+        android:textColorHint="@color/white"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/conpassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/lock"
+            android:drawablePadding="15dp"
+            android:textColor="@color/white"
+            android:drawableTint="@color/white"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.github.nikartm.button.FitButton
+        android:id="@+id/signUpBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/textinputlayput3"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        app:fb_backgroundColor="@color/navyblue"
+        app:fb_borderColor="@color/white"
+        app:fb_borderWidth="1.5dp"
+        app:fb_fontFamilyRes="@font/lato_heavy"
+        app:fb_text="SignUp"
+        app:fb_textColor="@color/amber"
+        app:fb_textSize="25dp"
+        app:fb_textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account, "
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"/>
+
+        <com.github.nikartm.button.FitButton
+            android:id="@+id/loginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fb_text="LogIn"
+            app:fb_textColor="@color/amber"
+            app:fb_textStyle="bold"
+            app:fb_textSize="17dp"
+            android:elevation="25dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

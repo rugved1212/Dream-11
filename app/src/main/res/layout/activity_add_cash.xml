@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCash"
+    android:background="#F2F2F2">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#083c5d">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD CASH"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/lato_heavy"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rr1"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_below="@id/appLayout"
+        android:background="@color/white"
+        android:layout_margin="7dp"
+        android:elevation="20dp">
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/wallet_1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Balance"
+            android:layout_toEndOf="@id/img1"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/blackshade"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/current_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹ 0"
+            android:textSize="20dp"
+            android:textColor="@color/blackshade"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="end"
+            android:layout_marginEnd="20dp"/>
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rr1"
+        android:layout_margin="10dp"
+        android:hint="₹ Amount to add"
+        app:boxStrokeWidth="1dp"
+        app:boxBackgroundColor="@color/white"
+        android:textColorHint="#80000000">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="@color/blackshade"
+            android:inputType="numberDecimal"
+            android:fontFamily="sans-serif-medium"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:layout_below="@id/textlayout">
+        <com.github.nikartm.button.FitButton
+            android:id="@+id/hundred"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            app:fb_text="₹ 100"
+            android:gravity="center"
+            app:fb_textSize="17dp"
+            app:fb_textColor="@color/blackshade"
+            app:fb_borderColor="@color/blackshade"
+            app:fb_borderWidth="1dp"
+            app:fb_cornerRadius="25dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"/>
+        <com.github.nikartm.button.FitButton
+            android:id="@+id/fivehundred"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            app:fb_text="₹ 500"
+            android:gravity="center"
+            app:fb_textSize="17dp"
+            app:fb_textColor="@color/blackshade"
+            app:fb_borderColor="@color/blackshade"
+            app:fb_borderWidth="1dp"
+            app:fb_cornerRadius="25dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"/>
+        <com.github.nikartm.button.FitButton
+            android:id="@+id/thousand"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            app:fb_text="₹ 1000"
+            android:gravity="center"
+            app:fb_textSize="17dp"
+            app:fb_textColor="@color/blackshade"
+            app:fb_borderColor="@color/blackshade"
+            app:fb_borderWidth="1dp"
+            app:fb_cornerRadius="25dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <com.github.nikartm.button.FitButton
+        android:id="@+id/add_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        app:fb_backgroundColor="#56C510"
+        app:fb_cornerRadius="5dp"
+        app:fb_text="ADD CASH"
+        app:fb_textColor="@color/white"
+        app:fb_textSize="18dp"
+        app:fb_textStyle="bold"
+        app:fb_fontFamilyRes="@font/lato_heavy"/>
+
+</RelativeLayout>

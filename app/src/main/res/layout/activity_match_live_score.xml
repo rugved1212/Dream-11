@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LIVE.Match_Live_Score">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#083c5d"
+            app:title="IND VS PAK"
+            app:titleTextColor="@color/amber"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rr"
+        android:layout_below="@id/appLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/navyblue">
+        <TextView
+            android:id="@+id/team1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MI"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"/>
+        <ImageView
+            android:id="@+id/team1img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/team1"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"/>
+        <TextView
+            android:id="@+id/team1score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_toEndOf="@id/team1img"
+            android:layout_alignTop="@id/team1img"
+            android:layout_alignBottom="@id/team1img"
+            android:gravity="center"
+            android:layout_marginStart="5dp"/>
+
+        <TextView
+            android:id="@+id/team1overs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/team1score"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@id/team1score"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="13dp" />
+        <TextView
+            android:id="@+id/team2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RCB"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_alignParentEnd="true"/>
+        <ImageView
+            android:id="@+id/team2img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/team2"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"/>
+        <TextView
+            android:id="@+id/team2score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_toStartOf="@id/team2img"
+            android:layout_alignTop="@id/team2img"
+            android:layout_alignBottom="@id/team2img"
+            android:gravity="center"
+            android:layout_marginEnd="5dp"/>
+        <TextView
+            android:id="@+id/team2overs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:layout_alignBottom="@id/team2score"
+            android:layout_toStartOf="@id/team2score"
+            android:layout_marginVertical="10dp"
+            android:layout_marginEnd="5dp"/>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LIVE"
+            android:textColor="#48F609"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="25dp"/>
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/rr"
+        app:tabMode="fixed"
+        app:tabBackground="@color/navyblue"
+        app:tabTextColor="@color/blackshade"
+        app:tabIndicatorColor="@color/amber"
+        app:tabRippleColor="@color/amber">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/contest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Contest"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/mycontest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Team"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/myteam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stats"/>
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tablayout"/>
+
+</RelativeLayout>

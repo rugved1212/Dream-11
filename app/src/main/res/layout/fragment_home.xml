@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Home">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        app:cardCornerRadius="35dp"
+        app:cardElevation="25dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="20dp"
+        android:layout_below="@id/appLayout"
+        android:elevation="25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start">
+
+                <ImageView
+                    android:id="@+id/cricket_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/cricket_white"
+                    android:layout_marginHorizontal="10dp"/>
+
+                <TextView
+                    android:id="@+id/cricketTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Cricket"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:gravity="center"
+                    android:textColor="#ffbb39"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/football_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/football"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"/>
+
+                <TextView
+                    android:id="@+id/footballTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Football"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/kabaddi_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/kabaddi"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/kabaddiTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Kabaddi"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:weightSum="3"
+            android:elevation="-10dp">
+
+            <TextView
+                android:id="@+id/selectField"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=""
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/selected_background"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=""
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=""
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/home_frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"/>
+
+</FrameLayout>

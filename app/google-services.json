@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "726977674346",
+    "firebase_url": "https://dream-11-54f35-default-rtdb.firebaseio.com",
+    "project_id": "dream-11-54f35",
+    "storage_bucket": "dream-11-54f35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:726977674346:android:ab9fe48cf52e289b091e13",
+        "android_client_info": {
+          "package_name": "com.example.dream11"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeqMdmX2xzcYNizVj9ge5EQCS6cJftj88"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:726977674346:android:89a80b8a0efdffc9091e13",
+        "android_client_info": {
+          "package_name": "com.example.ssd11"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeqMdmX2xzcYNizVj9ge5EQCS6cJftj88"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

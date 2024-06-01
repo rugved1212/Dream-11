@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TeamsAndContest.MyTeams">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/no_team_img"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/create_team_bg"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/no_team_text"/>
+
+        <TextView
+            android:id="@+id/no_team_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You haven't created a team yet !\nThe first step to winning starts here"
+            android:gravity="center"
+            android:fontFamily="casual"
+            android:layout_centerInParent="true" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ll"/>
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_alignParentBottom="true">
+            <com.github.nikartm.button.FitButton
+                android:id="@+id/create"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                app:fb_text="CREATE A TEAM"
+                app:fb_textSize="17dp"
+                app:fb_textColor="@color/amber"
+                app:fb_textStyle="bold"
+                app:fb_backgroundColor="@color/navyblue"
+                android:gravity="center"
+                app:fb_cornerRadius="5dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"/>
+            <com.github.nikartm.button.FitButton
+                android:id="@+id/lineup"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                app:fb_text="LINEUP"
+                app:fb_textSize="17dp"
+                app:fb_textColor="@color/navyblue"
+                app:fb_textStyle="bold"
+                app:fb_borderWidth="1dp"
+                app:fb_borderColor="@color/navyblue"
+                app:fb_icon="@drawable/lineup"
+                app:fb_iconHeight="25dp"
+                app:fb_iconWidth="25dp"
+                app:fb_iconPosition="left"
+                app:fb_iconMarginEnd="10dp"
+                android:gravity="center"
+                app:fb_cornerRadius="5dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"/>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

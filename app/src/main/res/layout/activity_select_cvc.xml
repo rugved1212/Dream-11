@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TeamsAndContest.CreateTeam.Select_C_VC">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#083c5d"
+            app:title="IND VS PAK"
+            app:titleTextColor="@color/amber"
+            app:subtitle="5days20hrsleft"
+            app:subtitleTextColor="@color/white"
+            app:subtitleTextAppearance="@color/white"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose your Captain and Vice Captain"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/appLayout"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:textColor="@color/blackshade"
+        android:fontFamily="@font/lato_heavy"
+        android:layout_marginVertical="5dp"/>
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C gets 2X points, VC gets 1.5 points"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/txt1"
+        android:textColor="@color/blackshade"
+        android:layout_marginBottom="5dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txt2">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+        <com.github.nikartm.button.FitButton
+            android:id="@+id/preview"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            app:fb_text="PREVIEW"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:fb_icon="@drawable/preview"
+            app:fb_iconPosition="left"
+            app:fb_iconMarginEnd="10dp"
+            app:fb_iconWidth="17dp"
+            app:fb_iconHeight="17dp"
+            app:fb_textStyle="bold"
+            app:fb_iconColor="@color/white"
+            app:fb_textColor="@color/white"
+            app:fb_backgroundColor="@color/blackshade"
+            app:fb_cornerRadius="75dp" />
+
+        <com.github.nikartm.button.FitButton
+            android:id="@+id/save"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:layout_marginVertical="20dp"
+            android:layout_weight="0.25"
+            app:fb_backgroundColor="#45A510"
+            app:fb_text="SAVE"
+            android:gravity="center"
+            app:fb_textColor="@color/white"
+            app:fb_textStyle="bold"
+            app:fb_cornerRadius="35dp"
+            app:fb_shadow="5dp"
+            android:layout_marginEnd="10dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:layout_marginVertical="2.5dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@color/blackshade"
+        android:layout_marginHorizontal="10dp"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rohit Sharma"
+        android:textStyle="bold"
+        android:textColor="@color/blackshade"
+        android:layout_toEndOf="@id/img"
+        android:layout_marginVertical="5dp"/>
+
+    <TextView
+        android:id="@+id/role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BATSMAN"
+        android:textStyle="bold"
+        android:textSize="10dp"
+        android:textColor="@color/blackshade"
+        android:layout_toEndOf="@id/img"
+        android:layout_below="@id/name"/>
+
+    <ImageView
+        android:id="@+id/c"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/vc"
+        android:background="@drawable/circle"
+        android:layout_marginHorizontal="10dp"/>
+
+    <TextView
+        android:id="@+id/ctxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C"
+        android:fontFamily="@font/lato_heavy"
+        android:textSize="17dp"
+        android:layout_alignTop="@id/c"
+        android:layout_alignBottom="@id/c"
+        android:layout_alignStart="@id/c"
+        android:layout_alignEnd="@id/c"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/vc"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/circle"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="15dp"/>
+
+    <TextView
+        android:id="@+id/vctxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VC"
+        android:fontFamily="@font/lato_heavy"
+        android:textSize="17dp"
+        android:layout_alignTop="@id/vc"
+        android:layout_alignBottom="@id/vc"
+        android:layout_alignStart="@id/vc"
+        android:layout_alignEnd="@id/vc"
+        android:gravity="center"/>
+
+</RelativeLayout>
